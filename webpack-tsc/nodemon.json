@@ -1,0 +1,11 @@
+{
+  "ignore": [
+    "node_modules"
+  ],
+  "watch": [
+    "src",
+    "package-lock.json"
+  ],
+  "exec": "webpack && node dist/main.js --inspect=0.0.0.0:9229",
+  "ext": "ts"
+}

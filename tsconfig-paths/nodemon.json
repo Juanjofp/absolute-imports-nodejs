@@ -1,0 +1,11 @@
+{
+  "ignore": [
+    "node_modules"
+  ],
+  "watch": [
+    "src",
+    "package-lock.json"
+  ],
+  "exec": "ts-node -r tsconfig-paths/register --files src/main.ts --inspect=0.0.0.0:9229",
+  "ext": "ts"
+}
