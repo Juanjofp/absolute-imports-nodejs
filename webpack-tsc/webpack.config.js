@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const nodeExternals =  require('webpack-node-externals');
 
 module.exports = {
     entry: './src/main.ts',
@@ -34,6 +35,9 @@ module.exports = {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
+        libraryTarget: 'commonjs2'
     },
     mode: "production",
+    target: 'node',
+    externals: [nodeExternals()]
 };

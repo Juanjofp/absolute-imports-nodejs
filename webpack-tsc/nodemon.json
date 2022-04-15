@@ -3,9 +3,9 @@
     "node_modules"
   ],
   "watch": [
-    "src",
+    "dist/main.js",
     "package-lock.json"
   ],
-  "exec": "webpack && node dist/main.js --inspect=0.0.0.0:9229",
+  "exec": "node dist/main.js --inspect=0.0.0.0:9229",
   "ext": "ts"
 }

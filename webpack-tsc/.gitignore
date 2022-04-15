@@ -62,5 +62,6 @@ typings/
 .next
 
 build
+dist/
 .idea
 .DS_Store
