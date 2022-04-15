@@ -4,9 +4,9 @@
     "description": "",
     "main": "dist/main.js",
     "scripts": {
-        "build": "tsc -p tsconfig-build.json",
+        "build": "tsc -p tsconfig-build.json && babel dist/main.js -o dist/main.js",
         "start": "babel-node dist/main.js",
-        "start:dev": "npm run build && babel-node dist/main.js --inspect=0.0.0.0:9229",
+        "start:dev": "npm run build && node dist/main.js --inspect=0.0.0.0:9229",
         "start:watch": "nodemon",
         "lint": "eslint . --ext .ts",
         "format": "prettier --write \"src/**/*.+(js|jsx|ts|tsx|json)\"",
@@ -24,7 +24,10 @@
     "repository": "",
     "license": "MIT",
     "devDependencies": {
+        "@babel/cli": "^7.17.6",
+        "@babel/core": "^7.17.9",
         "@babel/node": "^7.16.8",
+        "@babel/plugin-transform-runtime": "^7.17.0",
         "@babel/preset-env": "^7.16.11",
         "@types/convict": "^6.1.1",
         "@types/jest": "^27.4.1",

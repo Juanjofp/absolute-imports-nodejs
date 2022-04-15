@@ -6,6 +6,6 @@
     "src",
     "package-lock.json"
   ],
-  "exec": "tsc -p tsconfig-build.json && babel-node dist/main.js --inspect=0.0.0.0:9229",
+  "exec": "npm run build && node dist/main.js --inspect=0.0.0.0:9229",
   "ext": "ts"
 }

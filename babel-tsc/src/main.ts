@@ -3,7 +3,7 @@ import { sum } from '@/mylib/sum';
 
 async function main() {
     const result = await runATCommands();
-    console.log(result, sum(5, 2));
+    console.log(result, sum(6, 2));
 }
 
 main().catch(err => {
